@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans+PhagsPa&family=Noto+Sans+SC:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans SC", serif;
+    font-size: 7vw;
+}
+
+body {
+    color: #f4f4f4;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: "Bungee Inline", cursive;
+    color: #f5f5f5;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+}
+
+h1 {
+    transform: translateY(-20vh);
+    /*喵的他这个设置成top/margintop都不行，只有这个才可以。因为h1是静态定位*/
+    text-align: center;
+    color:#fff;
+    z-index: 10;
+}
+
+.flip-card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    border-radius: .1em;
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+    height: .75em;
+    line-height: 1;
+    padding: .25em;
+    overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+    background-color: #061833;
+    border-radius: .1em .1em 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+    background-color: #364469;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 0 0 .1em .1em;
+}
+
+.flip-card .top-flip {
+    position: absolute;
+    width: 100%;
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+}
+
+@keyframes flip-top {
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+.flip-card .bottom-flip {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: flip-bottom 250ms ease-in 250ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.container {
+    padding: 1vw;
+    border-radius: 0.5vw;
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    backdrop-filter: blur(20px);
+    gap: .5em;
+    justify-content: center;
+}
+
+.container-segment {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    align-items: center;
+}
+
+.segment {
+    display: flex;
+    gap: .1em;
+}
+
+.segment-title {
+    font-size: 3vw;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url(image2.jpg);
+    }
+
+    .top,
+    .flip-card .top-flip {
+        border-bottom: 1px solid rgba(1, 22, 31, 0.1);
+    }
+
+    h1 {
+        color: aliceblue;
+    }
+}

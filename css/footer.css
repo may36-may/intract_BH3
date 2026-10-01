@@ -1,0 +1,43 @@
+.footer {
+    width: 100%;
+    height: auto;           /* 让高度自适应内容 */
+    background-color: #383735;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer .infor {
+    text-align: left;
+    padding: 20px;
+    color: rgba(255,255,255,0.5);
+    font-size: 18px;
+}
+
+.footer .call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.footer .call .number {
+    width:100px;
+    height: 100px;
+    flex-direction: column;
+    background-size: contain; /*保证图片不缺失*/
+    background-repeat: no-repeat; /*确保不重叠*/
+    background-position: center; /*同一水平*/
+    cursor: pointer;
+}
+
+.footer .call .number:nth-child(1) {
+    background-image: url(../picture/MiHoYo.svg);
+}
+.footer .call .number:nth-child(2) {
+    background-image: url(../picture/logo.png);
+}

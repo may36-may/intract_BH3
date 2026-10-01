@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100wh;
+    background-image: linear-gradient(to top,#91defe 0%,#f9bccc 100%);  
+}
+h3{
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  margin:80px auto 0 auto;
+}
+h4{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 10px;;
+}
+.shell{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start; /*顶部对齐*/
+    margin:150px auto 0 auto;
+    gap: 100px;
+}
+.card{
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    padding: 0 25px;
+    margin:150px;
+    perspective: 2500px;
+    transition: all 0.4s;
+}
+.content{
+    margin: 0;
+    width: 600px;
+    height: 650px;
+    background-color: rgba(255,255,255,0.25); /*背景透明*/
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.25); /*边框透明*/
+    backdrop-filter: blur(10px); /*毛玻璃效果*/
+    word-wrap:break-word;
+    color: #fff;
+    font-size: 1.75em;
+    font-weight:700;
+    padding:25px;/*文本不贴边*/
+}
+
+.cover-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; ;
+}
+.wrapper{
+    transition: all 0.3s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.card:hover .wrapper{
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0,0,0,0.75);
+}
+.wrapper::before,
+.wrapper::after{
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all .3s;
+    position: absolute;
+    left: 0;
+}
+.wrapper::before{
+    top: 0;
+    height: 100%;
+    border-radius: 10px; ;
+    background-image: linear-gradient(to top,
+    transparent 46%,
+    rgba(12,13,19,0.5) 68%,
+    rgba(12,13,19) 97%);
+}
+.wrapper::after{
+    bottom: 0;
+    opacity: 1;
+    border-radius: 10px; ;
+    background-image: linear-gradient(to bottom,
+    transparent 46%,
+    rgba(12,13,19,0.5) 68%,
+    rgba(12,13,19) 97%);
+}
+.card:hover .wrapper::before,
+.wrapper::after{
+    opacity: 1;
+}
+.card:hover .wrapper::after{
+    height: 120px;
+}
+ .character{
+    width: 450%;
+    height: 180%;
+    opacity: 0;
+    transition: all 0.3s;
+    position: absolute;
+    z-index: -1;
+ }
+ .card:hover .character{
+    opacity: 1;
+    transform: translate(0%,-20%,100px);
+ }
+ .card:hover{
+    transform: translateY(40px);
+ }

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《崩坏3》官方网站</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../picture/Kiana.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/headpart.css">
+  <link rel="stylesheet" href="../css/musicplayer.css">
+  <link rel="stylesheet" href="../css/news.css">
+  <link rel="stylesheet" href="../css/character.css">
+  <link rel="stylesheet" href="../css/stageTest.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+
+  <div class="music-player">
+    <audio id="bgMusic" loop>
+      <source src="../video/Lifeflood.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="musicToggle" class="music-toggle">
+      <i class="fas fa-music"></i>
+    </button>
+  </div>
+
+
+  <div class="navpart">
+    <div class="logo">
+      <a href="https://bh3.mihoyo.com/main" target="_blank"><img src="../picture/logo.png" alt="Logo"></a>
+    </div>
+
+    <ul class="navlist">
+      <li class="btli"><a href="#news">公 告</a>
+      </li>
+      <li class="btli"><a href="#character">人 物</a>
+        <ul class="droplist">
+          <li><a href="../Character/Kiana/Kiana.html" target="_blank">Kiana</a></li>
+          <li><a href="../Character/Mei/Mei.html" target="_blank">Mei</a></li>
+          <li><a href="../Character/Bronya/Bronya.html" target="_blank">Bronya</a></li>
+          <li><a href="../Character/Seele/seele.html" target="_blank">Seele</a></li>
+          <li><a href="../Character/FuHua/FuHUa.html" target="_blank">FuHua</a></li>
+          <li><a href="../Character/Himeko/Himeko.html" target="_blank">Himeko</a></li>
+          <li><a href="../Character/Theresa/Theresa.html" target="_blank">Theresa</a></li>
+          <li><a href="../Character/Daier/Daier.html" target="_blank">Daier</a></li>
+          <li><a href="../Character/Rita/Rita.html" target="_blank">Rita</a></li>
+          <li><a href="../Character/Elysia/Elysia.html" target="_blank">Elysia</a></li>
+        </ul>
+      </li>
+      <li class="btli"><a href="#stage">舞 台</a>
+        <ul class="droplist">
+          <li><a href="../STAGE/story/story.html" target="_blank">故事线</a></li>
+          <li><a href="../STAGE/annversary/anniversary.html" target="_blank">周年庆</a></li>
+        </ul>
+      </li>
+      <li class="btli"><a href="#">周 边</a>
+        <ul class="droplist">
+          <li><a href="../GOODS/goods.html" target="_blank">展示</a></li>
+          <li><a href="../GOODS/photo.html" target="_blank">相册</a></li>
+        </ul>
+      </li>
+      <li class="btli"><a href="#">小游戏 </a>
+        <ul class="droplist">
+          <li><a href="./loading1.html" target="_blank">井字棋</a></li>
+          <li><a href="./loading2.html" target="_blank">2048</a></li>
+        </ul>
+      </li>
+      <li class="btli"><a href="../Time/Time.html" target="_blank">倒计时</a>
+      <li class="btli"><a href="../html/login.html" target="_blank">登 录</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="scroll-container">
+    <!-- 视频 -->
+    <section class="headpart">
+      <video id="headvideo" autoplay muted loop>/*循环吧,xql多久没见面了*/
+        <source src="../video/video2.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <!-- 新闻区块 -->
+    <section class="news">
+      <a id="news">
+        <h3>更新咨讯</h3>
+        <div class="news-main">
+          <div id="container">
+            <button class="slider-btn prev-btn">&lt;</button>
+            <button class="slider-btn next-btn">&gt;</button>
+            <img id="image1" src="../picture/post1.png" />
+            <img id="image2" src="../picture/post2.png" />
+            <img id="image3" src="../picture/post3.png" />
+            <img id="image4" src="../picture/post4.png" />
+            <img id="image5" src="../picture/post5.png" />
+
+            <div class="slider-indicators">
+              <span class="indicator active"></span>
+              <span class="indicator"></span>
+              <span class="indicator"></span>
+              <span class="indicator"></span>
+              <span class="indicator"></span>
+            </div>
+          </div>
+
+
+          <div class="news-content">
+            <ul class="news-nav">
+              <li class="nav-item nav-item-active">最新</li>
+              <li class="nav-item">新闻</li>
+              <li class="nav-item">公告</li>
+              <li class="nav-item">活动</li>
+            </ul>
+
+            <ul class="news-list1">
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    《崩坏3》同人衍生作品创作指引V3.0
+                  </p>
+                  <p class="item-data">2024/02/15</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    焕生之羽|七日登录领圣痕自选箱、水晶等奖励
+                  </p>
+                  <p class="item-data">2026/05/26</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    《崩坏3》8.9版本维护通知、新活动预告
+                  </p>
+                  <p class="item-data">2026/05/26</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">装备补给|垂曦净蕊&花愈朝夕</p>
+                  <p class="item-data">2026/05/25</p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="news-list2">
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    虹辉廊市|参与活动兑换全新服装、神之键自选箱等奖励！
+                  </p>
+                  <p class="item-data">2026/05/26</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    焕生之羽|七日登录领圣痕自选箱、水晶等奖励
+                  </p>
+                  <p class="item-data">2026/05/26</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    角色补给|逆命魔龙 降临！
+                  </p>
+                  <p class="item-data">2026/05/13</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">双核协站|参与活动获取活动勋章、水晶等奖励！</p>
+                  <p class="item-data">2026/05/13</p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="news-list3">
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    [封禁]2026年5月18外挂使用封禁名单
+                  </p>
+                  <p class="item-data">2026/05/18</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    [封禁]2026年5月11外挂使用封禁名单
+                  </p>
+                  <p class="item-data">2026/05/11</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    [封禁]2026年5月4外挂使用封禁名单
+                  </p>
+                  <p class="item-data">2026/05/04</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    [封禁]2026年4月27外挂使用封禁名单
+                  </p>
+                  <p class="item-data">2026/04/27</p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="news-list4">
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    虹辉廊市|参与活动兑换全新服装、神之键自选箱等奖励！
+                  </p>
+                  <p class="item-data">2026/05/26</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    焕生之羽|七日登录领圣痕自选箱、水晶等奖励
+                  </p>
+                  <p class="item-data">2026/05/26</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">
+                    双核协站|参与活动获取活动勋章、水晶等奖励！
+                  </p>
+                  <p class="item-data">2026/05/13</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  <p class="item-title ellipsis">花逢礼遇|八日连续登录领取装备补给卡等装备！</p>
+                  <p class="item-data">2026/04/30</p>
+                </a>
+              </li>
+            </ul>
+
+            <a href="https://bh3.mihoyo.com/news/693" target="_blank" class="news-more">查看所有资讯</a>
+          </div>
+        </div>
+    </section>
+
+
+    <!-- 人物 -->
+    <section class="characterpart">
+      <a id="character">
+        <h3>人物展示</h3>
+      </a>
+      <div class="cards-wrapper">
+
+        <a href="../Character/Kiana/Kiana.html" target="_blank" class="card">
+          <div class="box">
+            <img src="../picture/Kiana.png">
+          </div>
+          <div class="character">
+            <img src="../picture/Kiana.png">
+          </div>
+          <h4>琪亚娜</h4>
+        </a>
+
+        <a href="../Character/Mei/Mei.html" target="_blank" class="card">
+          <div class="box">
+            <img src="../picture/RaidenMei.png">
+          </div>
+          <div class="character">
+            <img src="../picture/RaidenMei.png">
+          </div>
+          <h4>雷电芽衣</h4>
+        </a>
+
+        <a href="../Character/Bronya/Bronya.html" target="_blank" class="card">
+          <div class="box">
+            <img src="../picture/Bronya.png">
+          </div>
+          <div class="character">
+            <img src="../picture/Bronya.png">
+          </div>
+          <h4>布洛妮娅</h4>
+        </a>
+
+        <a href="../Character/Seele/seele.html" target="_blank" class="card">
+          <div class="box">
+            <img src="../picture/Seele.png">
+          </div>
+          <div class="character">
+            <img src="../picture/Seele.png">
+          </div>
+          <h4>希儿</h4>
+        </a>
+
+        <a href="../Character/FuHua/FuHUa.html" target="_blank" class="card">
+          <div class="box">
+            <img src="../picture/FuHua.png">
+          </div>
+          <div class="character">
+            <img src="../picture/FuHua.png">
+          </div>
+          <h4>符华</h4>
+        </a>
+
+        <a href="../Character/Elysia/Elysia.html" target="_blank" class="card">
+          <div class="box">
+            <img src="../picture/Elysia.png">
+          </div>
+          <div class="character">
+            <img src="../picture/Elysia.png">
+          </div>
+          <h4>爱莉希雅</h4>
+        </a>
+
+
+        <a href="../Character/Himeko/Himeko.html" target="_blank" class="card">
+          <div class="box">
+            <img src="../picture/MurataHimeko.png">
+          </div>
+          <div class="character">
+            <img src="../picture/MurataHimeko.png">
+          </div>
+          <h4>无量塔姬子</h4>
+        </a>
+
+        <a href="../Character/Theresa/Theresa.html" target="_blank" class="card">
+          <div class="box">
+            <img src="../picture/Theresa.png">
+          </div>
+          <div class="character">
+            <img src="../picture/Theresa.png">
+          </div>
+          <h4>德莉莎</h4>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 舞台 -->
+    <section class="stage">
+      <a id="stage">
+        <h3>舞台展示</h3>
+      </a>
+      <div class="stagecontainer">
+        <div class="item active" style="background-image: url(../picture/stage/1-1.jpg);">
+          <div class="content">
+            <div class="text">
+              <div class="tit">梦，开始了</div>
+              <div class="sub">在梦中，少女听到了某人的呢喃。「在今后的人生里，我会不停地，不停地，出现在你最深的梦魇里。」「直到有一天，你再也无力抵抗......」</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-image: url(../picture/stage/2-1.jpg);">
+          <div class="content">
+            <div class="text">
+              <div class="tit">命运的终结</div>
+              <div class="sub">朝着天空前进的人类从塔顶跌落了下来，神让她再也无法理解别人的话语。可怜的人，她本想与自己所爱的人永不分离，但从此她们再也无法相见。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-image: url(../picture/stage/3-1.jpg);">
+          <div class="content">
+            <div class="text">
+              <div class="tit">在坠落的天空下</div>
+              <div class="sub">她，苏醒了。而她，却仍然被囚禁在那个梦中。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-image: url(../picture/stage/4-1.jpg);">
+          <div class="content">
+            <div class="text">
+              <div class="tit">自深海而来</div>
+              <div class="sub">「那就去吧，布洛妮娅。未来的道路已经为你开启。」</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-image: url(../picture/stage/5-1.jpg);">
+          <div class="content">
+            <div class="text">
+              <div class="tit">流星划过黑夜</div>
+              <div class="sub">纵使长夜漫漫永劫无期，我也要化身星辰点燃希望。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-image: url(../picture/stage/6-1.jpg);">
+          <div class="content">
+            <div class="text">
+              <div class="tit">献予昨日的挽歌</div>
+              <div class="sub">她迈出了那一步，朝着与光相反的方向。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-image: url(../picture/stage/7-1.jpg);">
+          <div class="content">
+            <div class="text">
+              <div class="tit">桔梗在此沉睡</div>
+              <div class="sub">无法违反的命运，终将把所有人带向同一个终点。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-image: url(../picture/stage/8-1.jpg);">
+          <div class="content">
+            <div class="text">
+              <div class="tit">太虚梦华录</div>
+              <div class="sub">弹指之间，转瞬千年。记忆被点燃之后的余晖，散发着淡淡的余温。</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 游戏 -->
+    <section class="game">
+    </section>
+
+
+    <section class="footer">
+      <div class="infor">
+        <p>健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+        <p>适龄提示：本游戏适合12岁以上玩家娱乐 | 沪公网安备31010402001113号 | 增值电信业务经营许可证：沪B2-20190555</p>
+        <p>沪ICP备19018275号-4 | 沪网文〔2025〕0178-050号 | 文网游备字〔2016〕M-CSG 1244 号 | 新广出审〔2016〕961号</p>
+        <p>互联网违法不良信息举报邮箱：tousu@service.mihoyo.com 互联网违法不良信息举报电话：021-60371750（工作时间：每天10点 - 20点）</p>
+        <p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听</p>
+        <p>未成年成长关爱热线：021-60371740（服务时间：8:00-23:00）</p>
+        <p>© 2016 米哈游版权所有 | 上海米哈游影铁科技有限公司 客服电话：400-666-6312</p>
+      </div>
+      <div class="call">
+        <div class="number"></div>
+        <div class="number"></div>
+      </div>
+    </section>
+
+
+    <script src="../js/musicplayer.js"></script>
+    <script src="../js/news.js"></script>
+    <script src="../js/stageTest.js"></script>
+</body>
+
+</html>

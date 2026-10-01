@@ -1,0 +1,34 @@
+/* 音乐播放器样式 */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.music-toggle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #f9bccc;
+  color: #f9bccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.music-toggle i {
+  font-size: 20px;
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.music-toggle.playing {
+  animation: rotate 4s linear infinite;
+}

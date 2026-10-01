@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(125deg,#91defe,#99c0f9,#bdb6ec,#d7b3e3,#f9bccc);  
+    background-size: 400%;  
+    animation: bgmove 20s infinite; 
+}
+/* 渐变效果动画 */
+@keyframes bgmove {  
+        0% {  
+            background-position: 0% 50%;  
+        }  
+  
+        50% {  
+            background-position: 100% 50%;  
+        }  
+  
+        0% {  
+            background-position: 0% 50%;  
+        }  
+}  
+main{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3,500px);
+    overflow-y: hidden;
+    padding: 0 300px 0 300px;
+}
+section{
+    display: flex; /*让他平铺的关键*/
+    position: relative;
+    gap:2rem;
+    flex-direction: column;
+}
+section:nth-child(1),
+section:nth-child(3){
+    /* 使用平滑的动画 */
+    animation: scroller linear;
+    /* 动画根据滚动进行 */
+    animation-timeline: scroll(root);
+    /* 子元素反转排列 */
+    flex-direction: column-reverse;
+    /* 初始位置设置为底部 */
+    translate: 0% calc(-100% + 100vh);
+}
+section img{
+    box-sizing: 0 0 10px #0002;
+    border-radius: 5px;
+    transition: .3s;
+}
+section img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(150,50,50,.5);
+}
+@keyframes scroller {
+    to{
+        /* 最终位置设置为顶部 */
+        translate: 0% calc(100% - 100vh);
+    }
+}
+
+section img:active {
+    transform: scale(1.5); /*放大多少倍数*/
+    z-index: 100;
+    box-shadow: 0 0 30px rgba(0,0,0,0.25);
+}
+
+/* 当某张图片被按下时，让所有其他图片变暗（利用兄弟/父级选择器） */
+main:active img:not(:active) {
+    filter: brightness(0.25);
+}
+

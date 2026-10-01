@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    /* background-image: linear-gradient(125deg, #e0c3fc,#8ec5fc);   */
+    background-image: linear-gradient(125deg,#91defe,#99c0f9,#bdb6ec,#d7b3e3,#f9bccc);  
+    background-size: 400%;  
+    animation: bgmove 20s infinite;  
+}
+/* 渐变效果动画 */
+@keyframes bgmove {  
+        0% {  
+            background-position: 0% 50%;  
+        }  
+  
+        50% {  
+            background-position: 100% 50%;  
+        }  
+  
+        0% {  
+            background-position: 0% 50%;  
+        }  
+}  
+.container{
+    position:relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card{
+    position: absolute; /*加上这个就是重叠成一张*/
+    width: 360px;
+    height: 540px;
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: rgba(0,0,0,1);
+    /* border: 10px solid  transparent; */
+    transition: .5s;
+    transform-origin: 50% 100%; /*这个是相较于原点旋转的，不会自己查文档*/
+    /*filter: hue-rotate(calc(var(--i) * 60deg)); 这个是色相的变化，但是我不用卡片颜色就删掉*/
+    /* box-shadow: 0 15px 50px rgba(0,0,0,.1); */
+}
+.pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: inherit;
+}
+.container:hover .card{
+    transform: rotate(calc(var(--i) * 5deg))
+            translate(calc(var(--i) * 120px),-65px);
+    /*也就是rotate是控制我的旋转，translate就是平移的位置其中太靠下了就往上一点*/
+   box-shadow: 0 15px 50px rgba(0,0,0,.25);
+   color:rgba(0,0,0,.25);
+   cursor: pointer;
+}
+.container:active .card:not(:active) .pic {
+    filter: brightness(0.5);
+    transition: filter 0.2s;
+}
+.container .card:active{
+    translate: calc(var(--i) * 20px) -50px;
+    z-index: 999;
+}

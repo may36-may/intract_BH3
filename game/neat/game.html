@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>井字棋</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/picture/Kiana.jpg">
+    <link rel="stylesheet" href="../neat/game.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="current-status" id="currentStatus">
+            <img src="../neat/pic/1.png" id="currentBeastImg" alt="">
+            <p>&nbsp; 's turn</p>
+        </div>
+
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+
+        <div class="game-end-overlay" id="gameEndOverlay">
+            <div class="winning-message" data-winning-message>
+                <p></p>
+            </div>
+            <div class="btn-container">
+                <button class="reset-button" id="resetButton">paly again</button>
+            </div>
+        </div>
+    </div>
+    <video src="../neat/pic/back.mp4" muted loop autoplay></video>
+    <script src="../neat/game.js"></script>
+</body>
+</html>

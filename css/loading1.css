@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+.loader
+{
+    position: relative;
+    cursor: default;
+    -webkit-box-reflect: below -30px linear-gradient(transparent,#0005);
+    /*倒影效果:位于文字下方30px，渐变从透明到半透明黑 */
+}
+.loader span
+{
+    position: relative;
+    display: inline-flex;  /*内联弹性盒子，保证字母排成一行又能单独设置动画 */
+    font-size: 3em;
+    color:transparent;  /* 文字本体透明*/
+    -webkit-text-stroke: 1px #fff9; /* 文字描边属性*/
+    text-transform: uppercase; /*强制将字母大写*/
+    font-weight: 800;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(0.15s * var(--i));    /* 利用自定义属性实现错峰跳动 */
+    /*
+    calc()函数主要实行计算，加减乘除都ok呀
+    配合上delay实现延迟执行效果，最终呈现我每个字母不同时间跳起来
+    乘除法时，至少一个操作数必须是数值（无单位），结果取第一个操作数的单位。
+    例如 calc(0.15s * 2) 合法，calc(10px * 2px) 非法（不能乘两个带单位的量）。*/
+}
+@keyframes animate 
+{
+    0%
+    {
+        transform: translateY(0px);
+        color:transparent;
+        text-shadow: none;
+    }
+    20%
+    {
+        transform: translateY(-60px); /*向上跳*/
+        color:#fff;
+        text-shadow: 0 0 5px #fff,
+        0 0 25px #fff,
+        0 0 50px #fff;
+        /*文字周围加上阴影扩散形成类似荧光效果*/
+        /*
+        text-shadow: 水平偏移量 垂直偏移量 模糊半径 颜色;
+        水平偏移量：正数 → 阴影向右；负数 → 阴影向左。
+        垂直偏移量：正数 → 阴影向下；负数 → 阴影向上。
+        */
+    }
+    40%,100%
+    {
+        transform: translateY(0px);
+        color:transparent;
+        text-shadow: none;
+    }            
+}

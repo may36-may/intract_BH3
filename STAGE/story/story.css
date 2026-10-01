@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.shell{
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 3px;
+}
+.shell div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 30px;
+    /* letter-spacing: 2px; */
+}
+.image{
+    transform: translateZ(-1px) scale(1.6);
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+}
+.text{
+    height: 50vh;
+    background-color: #fff;
+    text-align: center;
+}
+.text h1{
+    color: #000;
+    font-size:3.5em;;
+}
+h1 p{
+    font-size:25px;;
+}
+.heading{
+    z-index: -1;
+    transform: translateY(-50vh) translateZ(1px);
+    /*translateY控制字体位置，后面一个控制字体浮现距离视角距离*/
+    color: #fff;
+    font-size:15px;
+    text-align: center;
+    white-space: normal;      /* 允许换行 */
+    word-break: break-word; 
+    margin: 20px 0;
+}

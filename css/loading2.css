@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "阿里巴巴普惠体";
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* 隐藏超出视口的内容，避免出现滚动条 */
+
+    min-height: 100vh;
+    background-color: #111;
+}
+
+.box{
+    display: flex;
+    gap: 10px;
+
+    transform-style: preserve-3d;
+    transform: rotateY(30deg) rotateX(10deg);
+}
+
+.box .text{
+    width: 100px;
+    height: 100px;
+
+    position: relative;
+    transform-style: preserve-3d;/* 子元素span的3D变换相对于当前容器 */
+
+    transition: 2s ease-in-out;
+    transition-delay: calc(0.25s * var(--i));
+}
+.box .text::before{
+    content: "";
+    /* 加入这个就让左边有了一个挡板的样子，不加的话那这个小方块左边就是透明的 */
+
+    width: 100%;
+    height: 100%;
+    background-color: #373737;
+
+    position: absolute;
+    transform-origin: left;
+    /* 这个让以下transform的变化以左边为基准来变化 */
+    transform: rotateY(90deg) translateX(-50%);
+    /* 关键变换：沿Y轴旋转90度成为右侧面，并沿X轴负方向平移自身宽度的50%，使其正好贴合在立方体右侧 */
+}
+
+.box .text:first-child::before{
+    background-color: #e95e87;
+}
+.box:hover .text{
+    transform: rotateX(-540deg);
+}
+.box:hover .text:first-child{
+    transform: rotateX(540deg);
+}
+/* 这两个就做到让他们旋转方向不同 */
+
+.box .text span{
+    /* 首先让文字居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#434343,#535353);
+    font-size: 4em;
+    font-weight: 500;
+    color: #fff;
+
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateX(calc(90deg * var(--j))) translateZ(50px);
+}
+
+.box .text:first-child span{
+    background:linear-gradient(#ec81a1,#e1a5b5);
+}
